@@ -10,21 +10,22 @@ use App\Http\Requests\StoreAcountRequest;
 use App\Http\Requests\UpdateAcountRequest; 
 use App\Http\Resources\AcountResourse;
 use App\Traits;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Hash; 
+use Illuminate\Support\Facades\Auth;
 
 
 class AdminController extends Controller
-{
+{ 
 
-    use ResponseApi;
+    use ResponseApi; 
     public function __construct(){
-            
-    }
+        $this->middleware('role:Admin'); 
+    } 
     public function store(StoreAcountRequest $request)
     {
         $request['password'] = Hash::make($request->password);
-        $Acount = Acount::create($request->safe()->all());
+        $Acount = Acount::create($request->all());
         $Acount->addRole($request->description);
-        return $this->responseSuccess('successfully created a new Acount',AcountResourse($Acount));
+        return $this->responseSuccess('successfully created a new Acount',new AcountResourse($Acount));
     }
 }

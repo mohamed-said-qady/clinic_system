@@ -17,7 +17,7 @@ use App\Http\Controllers\api\ProfileController;
 use App\Http\Controllers\api\SpecialisityController;
 use App\Http\Controllers\api\SymptomController;
 use App\Http\Controllers\api\Auth\AuthController;
-
+use App\Http\Controllers\api\admin\AdminController;
 
 
 
@@ -53,8 +53,11 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::apiResource('specialisity',SpecialisityController::class);
     Route::apiResource('symptom',SymptomController::class);
     Route::apiResource('profile',ProfileController::class);
+    Route::apiResource('admin',AdminController::class);
 
-
+    });
+    Route::middleware('role:Doctor')->group(function(){
+        Route::apiResource('doctor',DoctorController::class);
 
     });
 });

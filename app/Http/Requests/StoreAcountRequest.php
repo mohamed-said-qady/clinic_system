@@ -26,7 +26,7 @@ class StoreAcountRequest extends FormRequest
             'password'          => ['required'],
             'email'             => ['required','email'],
             'specialisity_id'   => ['required','exists:specialisities,id'],
-            'description'       => ['required','in:patient,doctor,admin,lab,chemist'],
+            'description'       => ['required','in:Patient,Doctor,Admin,Lab,Chemist'],
             'user_id'           => ['required'],
             'archieved'         => ['required'],
         ];

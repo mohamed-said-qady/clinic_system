@@ -22,11 +22,7 @@ class ConsultationController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreConsultationRequest $request)
-    {
-            $Consultation = Consultation::create($request->safe()->all());
-            return $this->responseSuccess('Consultation has been created successfully!',new ConsultationResource($Consultation));
-    }
+
 
     /**
      * Display the specified resource.

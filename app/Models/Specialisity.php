@@ -15,6 +15,6 @@ class specialisity extends Model
     ]; 
     public function acounts(){
         return $this->hasMany(Acount::class);
-    }
+    } 
 
 }

@@ -45,7 +45,7 @@ class AuthController extends Controller
         $Acount->email = $request->input('email');
         $Acount->password = Hash::make($request->input('password'));
         $Acount->save();
-        $Acount->addRole('customer'); 
+        $Acount->addRole('patient'); 
         $token = $Acount->createToken('clinic')->plainTextToken;
         return $this->responseSuccess('Acount registered successfully', $token);
     } catch (Throwable $th) {

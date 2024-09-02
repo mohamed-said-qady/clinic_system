@@ -13,7 +13,7 @@ class prescription extends Model
         'instruction',
         'diagonsis',
         'active',
-        'medicine_potency',
+        'medicine_potency', 
         'remarks',
         'lab_test',
         'prescription_delivered',

@@ -17,4 +17,4 @@ class consultation extends Model
     ]; 
     public function acount(){
         return $this->belongsTo(Acount::class);
-    }}
+    }} 

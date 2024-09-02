@@ -23,11 +23,7 @@ class PrescriptionController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePrescriptionRequest $request)
-    {
-            $Prescription = Prescription::create($request->safe()->all());
-            return $this->responseSuccess('Prescription has been created successfully!',new PrescriptionResource($Prescription));
-    }
+
 
     /**
      * Display the specified resource.

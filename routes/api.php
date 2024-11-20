@@ -31,11 +31,12 @@ use App\Http\Controllers\api\admin\AdminController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::middleware('SetAppLang')->prefix('{locale}')->group(function() {
 Route::post('login',[AuthController::class,'login'])->name('login');
+});
 
 
-
-Route::middleware('auth:sanctum')->group(function() {
+Route::middleware('auth:sanctum','SetAppLang')->prefix('{locale}')->group(function() {
 
    Route::middleware('role:Admin')->group(function(){ 
         //admin
@@ -54,7 +55,6 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::apiResource('symptom',SymptomController::class);
     Route::apiResource('profile',ProfileController::class);
     Route::apiResource('admin',AdminController::class);
-
     });
     Route::middleware('role:Doctor')->group(function(){
         Route::apiResource('doctor',DoctorController::class);

@@ -1,0 +1,694 @@
+{
+	"info": {
+		"_postman_id": "9cd07ff7-aae6-48e8-bc0d-23989516ea52",
+		"name": "clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26571394"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "samir@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234554321",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "doctor",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|MQcmhVExa5tVZUrQDHl6BXdVp0UEkv5zBWrnqR1t900ddbdf"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "adaam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "adaamm@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234554321",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Doctor",
+									"type": "text"
+								},
+								{
+									"key": "profile_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "archeived",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/doctor"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "specialisity",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|MQcmhVExa5tVZUrQDHl6BXdVp0UEkv5zBWrnqR1t900ddbdf"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "باطنه",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "امراض صدرية وكبد",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/specialisity"
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/specialicity"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "consultation",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|MQcmhVExa5tVZUrQDHl6BXdVp0UEkv5zBWrnqR1t900ddbdf"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "online_appointment",
+									"value": "first ",
+									"type": "text"
+								},
+								{
+									"key": "symptoms",
+									"value": "null",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "request_status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "start_at",
+									"value": "2024-01-01 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "acount_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/consultation"
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{clinic}}/api/consultation"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{clinic}}/api/consultation"
+					},
+					"response": []
+				},
+				{
+					"name": "store Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{clinic}}/api/consultation"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "paitients",
+			"item": []
+		},
+		{
+			"name": "prescription",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|MQcmhVExa5tVZUrQDHl6BXdVp0UEkv5zBWrnqR1t900ddbdf"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "medication",
+									"value": "ctaflam",
+									"type": "text"
+								},
+								{
+									"key": "instruction",
+									"value": "to head pain",
+									"type": "text"
+								},
+								{
+									"key": "diagonsis",
+									"value": "الام وصداع",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "medicine_potency",
+									"value": "34",
+									"type": "text"
+								},
+								{
+									"key": "remarks",
+									"value": "مرتين في اليوم",
+									"type": "text"
+								},
+								{
+									"key": "lab_test",
+									"value": "aml lab test",
+									"type": "text"
+								},
+								{
+									"key": "prescription_delivered",
+									"value": "cotecostredat",
+									"type": "text"
+								},
+								{
+									"key": "lab_requests_performed",
+									"value": "performed",
+									"type": "text"
+								},
+								{
+									"key": "invoice_amount",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "acount_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/prescription"
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{clinic}}/api/prescription"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{clinic}}/api/prescription"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|zlZ5WMYElj7MBcIAgkJlfBqyJT4TQKYBiHHkVoQa5920ef83"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "dr mohamed",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234554321",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohamed@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "specialisity_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Doctor",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "archieved",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|MQcmhVExa5tVZUrQDHl6BXdVp0UEkv5zBWrnqR1t900ddbdf"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "hossam",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "mohamed",
+									"type": "text"
+								},
+								{
+									"key": "sex",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "30\\12\\1994",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01123243444",
+									"type": "text"
+								},
+								{
+									"key": "allergies",
+									"value": "hasasya",
+									"type": "text"
+								},
+								{
+									"key": "PrimaryCareDoctorId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "prefHospital",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/profile"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "location",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|MQcmhVExa5tVZUrQDHl6BXdVp0UEkv5zBWrnqR1t900ddbdf"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "city",
+									"value": "ayaat",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "6767",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "available",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "egypt",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "matanya",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/location"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hospital",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|MQcmhVExa5tVZUrQDHl6BXdVp0UEkv5zBWrnqR1t900ddbdf"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "zahraa",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "23363",
+									"type": "text"
+								},
+								{
+									"key": "location_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{clinic}}/api/hospital"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

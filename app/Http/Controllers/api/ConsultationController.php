@@ -15,8 +15,8 @@ class ConsultationController extends Controller
 
     public function index()
     {
-        $Consultation = Consultation::paginate(20);    
-         return $this->responseSuccess('show all Consultation ',ConsultationResource($Consultation));
+        $Consultation = Consultation::find(1);    
+         return $this->responseSuccess('show all Consultation ',new ConsultationResource($Consultation));
     }
 
     /**

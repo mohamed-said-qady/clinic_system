@@ -20,8 +20,7 @@ class ConsultationResource extends JsonResource
             'user_id'                 => $this->user_id ,
             'request_status'          => $this->request_status,
             'start_at'                => $this->start_at,
-            'acount_id'               => $this->acount_id,
-
+            'patient'               => new AcountResourse($this->acount),
         ];
     }
 }
